@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "emails": {
+                    "example": "a@b.com, c@d.com, e@f.com",
+                    "type": "string"
+                },
+                "is_admin": {
+                    "example": true,
+                    "type": "boolean"
+                },
+                "map_id": {
+                    "example": 34925783,
+                    "type": "integer"
+                },
+                "user_ids": {
+                    "example": "5839459, 389423, 89494, 686950",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

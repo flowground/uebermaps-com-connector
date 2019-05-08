@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "email": {
+                    "example": "a@b.com",
+                    "type": "string"
+                },
+                "password": {
+                    "example": "••••••••",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

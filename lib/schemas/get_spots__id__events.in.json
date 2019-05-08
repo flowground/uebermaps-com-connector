@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "timeframe_start": {
+            "required": false,
+            "type": "string"
+        },
+        "timeframe_end": {
+            "required": false,
+            "type": "string"
+        },
+        "bounds": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

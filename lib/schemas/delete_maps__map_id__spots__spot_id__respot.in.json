@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "map_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "spot_id": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "description": {
+                    "example": "A collection of restaurants, cafes, clubs and random spots that I recommend in Berlin",
+                    "type": "string"
+                },
+                "map_settings": {
+                    "properties": {
+                        "editor_access": {
+                            "example": [
+                                "can_administer.map",
+                                "can_administer.spots",
+                                "can_administer.events",
+                                "can_administer.comments",
+                                "can_administer.attachments",
+                                "can_administer.collaborators"
+                            ],
+                            "type": "string"
+                        },
+                        "respotting_to_this_map": {
+                            "example": true,
+                            "type": "boolean"
+                        },
+                        "visitor_access": {
+                            "example": [
+                                "can_administer.map",
+                                "can_administer.spots",
+                                "can_administer.events",
+                                "can_administer.comments",
+                                "can_administer.attachments",
+                                "can_administer.collaborators"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "picture": {
+                    "example": "<BASE_64_ENCODED_STRING>",
+                    "type": "string"
+                },
+                "title": {
+                    "example": "My favourite places in Berlin",
+                    "type": "string"
+                },
+                "visibility": {
+                    "enum": [
+                        "public",
+                        "link",
+                        "private"
+                    ],
+                    "example": "public",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

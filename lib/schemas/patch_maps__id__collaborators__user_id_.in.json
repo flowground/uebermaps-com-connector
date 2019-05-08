@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "user_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "group": {
+                    "enum": [
+                        "admin",
+                        "editor"
+                    ],
+                    "example": "editor",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

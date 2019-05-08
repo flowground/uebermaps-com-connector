@@ -1,0 +1,986 @@
+{
+    "title": "uebermaps API endpoints",
+    "description": "Enable people to store spots on public and private maps",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/uebermaps.com/2.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://uebermaps.com/api/v2",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "patch_account": {
+            "main": "./lib/actions/patch_account.js",
+            "title": "Update account",
+            "description": "Update account. Wrap map parameters in [user].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_account.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_attachments__id_": {
+            "main": "./lib/actions/delete_attachments__id_.js",
+            "title": "Delete attachment",
+            "description": "Delete attachment.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_attachments__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_authentication": {
+            "main": "./lib/actions/post_authentication.js",
+            "title": "Sign in user",
+            "description": "Sign in user. Wrap authentication parameters in [user].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_authentication.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_collaborator_invitations": {
+            "main": "./lib/actions/get_collaborator_invitations.js",
+            "title": "List your collaborator invitations",
+            "description": "List your collaborator invitations.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_collaborator_invitations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_collaborator_invitations": {
+            "main": "./lib/actions/post_collaborator_invitations.js",
+            "title": "Invite user to collaborate on map",
+            "description": "Invite user to collaborate on map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_collaborator_invitations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_collaborator_invitations__id_": {
+            "main": "./lib/actions/delete_collaborator_invitations__id_.js",
+            "title": "Delete collaborator invitation",
+            "description": "Delete collaborator invitation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_collaborator_invitations__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_collaborator_invitations__id_": {
+            "main": "./lib/actions/get_collaborator_invitations__id_.js",
+            "title": "Show collaborator invitation",
+            "description": "Show collaborator invitation",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_collaborator_invitations__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_collaborator_invitations__id_": {
+            "main": "./lib/actions/patch_collaborator_invitations__id_.js",
+            "title": "Accept collaborator invitation.",
+            "description": "Accept collaborator invitation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_collaborator_invitations__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_comments__id_": {
+            "main": "./lib/actions/delete_comments__id_.js",
+            "title": "Delete comment",
+            "description": "Delete comment.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_comments__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_comments__id_": {
+            "main": "./lib/actions/patch_comments__id_.js",
+            "title": "Update comment",
+            "description": "Update comment. Wrap comment parameters in [comment].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_comments__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_events": {
+            "main": "./lib/actions/get_events.js",
+            "title": "List your own events",
+            "description": "List your own events.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_events.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_events__id_": {
+            "main": "./lib/actions/delete_events__id_.js",
+            "title": "Delete event",
+            "description": "Delete event.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_events__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_events__id_": {
+            "main": "./lib/actions/get_events__id_.js",
+            "title": "Get event",
+            "description": "Get basic information about an event",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_events__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_events__id_": {
+            "main": "./lib/actions/patch_events__id_.js",
+            "title": "Update event",
+            "description": "Update event. Wrap event parameters in [event].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_events__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps": {
+            "main": "./lib/actions/get_maps.js",
+            "title": "List your own maps",
+            "description": "List your own maps.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_maps": {
+            "main": "./lib/actions/post_maps.js",
+            "title": "Create map",
+            "description": "Create map. Wrap map parameters in [map]. To add a map header picture pass a base64 encoded string to [map][picture].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_maps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps_search": {
+            "main": "./lib/actions/get_maps_search.js",
+            "title": "Search maps",
+            "description": "Search maps",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_maps__id_": {
+            "main": "./lib/actions/delete_maps__id_.js",
+            "title": "Delete map",
+            "description": "Delete map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_maps__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id_": {
+            "main": "./lib/actions/get_maps__id_.js",
+            "title": "Get map",
+            "description": "Get basic information about a map",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_maps__id_": {
+            "main": "./lib/actions/patch_maps__id_.js",
+            "title": "Update map",
+            "description": "Update map. Wrap map parameters in [map]. To update the map header picture pass a base64 encoded string to [map][picture].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_maps__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__attachments": {
+            "main": "./lib/actions/get_maps__id__attachments.js",
+            "title": "List attachments for a given map",
+            "description": "List attachments for a given map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__attachments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_maps__id__attachments": {
+            "main": "./lib/actions/post_maps__id__attachments.js",
+            "title": "Upload map attachment",
+            "description": "Upload map attachment. Wrap attachment parameters in [attachment]",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_maps__id__attachments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__collaborators_": {
+            "main": "./lib/actions/get_maps__id__collaborators_.js",
+            "title": "List collaborators of a map",
+            "description": "List collaborators of a map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__collaborators_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_maps__id__collaborators__user_id_": {
+            "main": "./lib/actions/delete_maps__id__collaborators__user_id_.js",
+            "title": "Delete collaboration",
+            "description": "Delete collaboration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_maps__id__collaborators__user_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_maps__id__collaborators__user_id_": {
+            "main": "./lib/actions/patch_maps__id__collaborators__user_id_.js",
+            "title": "Update collaborator",
+            "description": "Update collaborator. Wrap collaborator parameters in [collaborator]",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_maps__id__collaborators__user_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__comments": {
+            "main": "./lib/actions/get_maps__id__comments.js",
+            "title": "List comments for a given map",
+            "description": "List comments for a given map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__comments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_maps__id__comments": {
+            "main": "./lib/actions/post_maps__id__comments.js",
+            "title": "Create map comment",
+            "description": "Create map comment. Wrap comment parameters in [comment].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_maps__id__comments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__respots": {
+            "main": "./lib/actions/get_maps__id__respots.js",
+            "title": "List respots of a map",
+            "description": "List respots of a map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__respots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__spots": {
+            "main": "./lib/actions/get_maps__id__spots.js",
+            "title": "List spots for a given map",
+            "description": "List spots for a given map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__spots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_maps__id__spots": {
+            "main": "./lib/actions/post_maps__id__spots.js",
+            "title": "Create spot",
+            "description": "Create spot. Wrap parameters in [spot]. To add a spot picture pass a base64 encoded string to [spot][picture].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_maps__id__spots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_maps__id__subscriptions": {
+            "main": "./lib/actions/delete_maps__id__subscriptions.js",
+            "title": "Unsubscribe from map",
+            "description": "Unsubscribe from map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_maps__id__subscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__id__subscriptions": {
+            "main": "./lib/actions/get_maps__id__subscriptions.js",
+            "title": "List subscriptions for a given map",
+            "description": "List subscriptions for a given map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__id__subscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_maps__map_id__spots__id_": {
+            "main": "./lib/actions/get_maps__map_id__spots__id_.js",
+            "title": "Get spot",
+            "description": "Get basic information about a spot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_maps__map_id__spots__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_maps__map_id__spots__spot_id__respot": {
+            "main": "./lib/actions/delete_maps__map_id__spots__spot_id__respot.js",
+            "title": "Delete respot from map by spot id",
+            "description": "Delete respot from map by spot id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_maps__map_id__spots__spot_id__respot.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_respot_maps": {
+            "main": "./lib/actions/get_respot_maps.js",
+            "title": "List maps that user can respot to",
+            "description": "List maps that user can respot to.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_respot_maps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_respots__id_": {
+            "main": "./lib/actions/delete_respots__id_.js",
+            "title": "Delete respot",
+            "description": "Delete respot.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_respots__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_respots__id_": {
+            "main": "./lib/actions/get_respots__id_.js",
+            "title": "Get respot",
+            "description": "Get basic information about a respot",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_respots__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_share_map__id_": {
+            "main": "./lib/actions/get_share_map__id_.js",
+            "title": "Get secret access token to share map",
+            "description": "Get secret access token of an uebermap with access set to 'Secret link'. Pass the 'token' on every request you make to access this uebermap and its resources. F.e. token=1-x_gqu7eLBe3uKoAGAGXy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_share_map__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_spots": {
+            "main": "./lib/actions/get_spots.js",
+            "title": "List your own spots",
+            "description": "List your own spots.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_spots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_spots_search": {
+            "main": "./lib/actions/get_spots_search.js",
+            "title": "Search spots",
+            "description": "Search spots",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_spots_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_spots__id_": {
+            "main": "./lib/actions/delete_spots__id_.js",
+            "title": "Delete spot",
+            "description": "Delete spot.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_spots__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_spots__id_": {
+            "main": "./lib/actions/patch_spots__id_.js",
+            "title": "Update spot",
+            "description": "Update spot. Wrap parameters in [spot]. To update the spot picture pass a base64 encoded string to [spot][picture].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_spots__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_spots__id__attachments": {
+            "main": "./lib/actions/get_spots__id__attachments.js",
+            "title": "List attachments for a given spot",
+            "description": "List attachments for a given spot.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_spots__id__attachments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_spots__id__attachments": {
+            "main": "./lib/actions/post_spots__id__attachments.js",
+            "title": "Upload spot attachment",
+            "description": "Upload spot attachment. Wrap attachment parameters in [attachment]",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_spots__id__attachments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_spots__id__comments": {
+            "main": "./lib/actions/get_spots__id__comments.js",
+            "title": "List comments for a given spot",
+            "description": "List comments for a given spot.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_spots__id__comments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_spots__id__comments": {
+            "main": "./lib/actions/post_spots__id__comments.js",
+            "title": "Create spot comment",
+            "description": "Create spot comment. Wrap comment parameters in [comment].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_spots__id__comments.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_spots__id__events": {
+            "main": "./lib/actions/get_spots__id__events.js",
+            "title": "List events for a given spot",
+            "description": "List maps for a given spot.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_spots__id__events.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_spots__id__events": {
+            "main": "./lib/actions/post_spots__id__events.js",
+            "title": "Create event",
+            "description": "Create event. Wrap map parameters in [event].",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_spots__id__events.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_spots__id__respots": {
+            "main": "./lib/actions/post_spots__id__respots.js",
+            "title": "Respot a spot onto a map",
+            "description": "Respot a spot onto a map.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_spots__id__respots.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_subscriptions": {
+            "main": "./lib/actions/get_subscriptions.js",
+            "title": "List subscriptions. Pass no parameters to get own subscriptions",
+            "description": "List subscriptions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_subscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_subscriptions": {
+            "main": "./lib/actions/post_subscriptions.js",
+            "title": "Create map subscription",
+            "description": "Create map subscription.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_subscriptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_trends_latest": {
+            "main": "./lib/actions/get_trends_latest.js",
+            "title": "List latest maps",
+            "description": "List latest maps.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_trends_latest.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_trends_recommended": {
+            "main": "./lib/actions/get_trends_recommended.js",
+            "title": "List recommended maps",
+            "description": "List recommended maps.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_trends_recommended.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users_search": {
+            "main": "./lib/actions/get_users_search.js",
+            "title": "Search users",
+            "description": "Search users",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users__id_": {
+            "main": "./lib/actions/get_users__id_.js",
+            "title": "Get user profile",
+            "description": "Get profile a user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users__id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_users__user_id__maps": {
+            "main": "./lib/actions/get_users__user_id__maps.js",
+            "title": "List maps for a given user",
+            "description": "List maps for a given user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_users__user_id__maps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "body": {
+                    "example": "Nice photo",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

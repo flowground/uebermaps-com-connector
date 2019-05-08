@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "about": {
+                    "example": "The comedian",
+                    "type": "string"
+                },
+                "header": {
+                    "example": "<BASE_64_ENCODED_STRING>",
+                    "type": "string"
+                },
+                "language": {
+                    "example": "en",
+                    "type": "string"
+                },
+                "location": {
+                    "example": "Little Rock, Arkansas",
+                    "type": "string"
+                },
+                "name": {
+                    "example": "Bill Hicks",
+                    "type": "string"
+                },
+                "picture": {
+                    "example": "<BASE_64_ENCODED_STRING>",
+                    "type": "string"
+                },
+                "screen_name": {
+                    "example": "billhicks",
+                    "type": "string"
+                },
+                "time_zone": {
+                    "example": "Pacific Time (US & Canada)",
+                    "type": "string"
+                },
+                "url": {
+                    "example": "http://www.billhicks.com",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

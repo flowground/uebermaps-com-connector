@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "q": {
+            "type": "string"
+        },
+        "d": {
+            "type": "integer"
+        },
+        "lat": {
+            "type": "number"
+        },
+        "lon": {
+            "type": "number"
+        }
+    }
+}

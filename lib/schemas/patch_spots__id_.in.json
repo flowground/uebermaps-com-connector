@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "properties": {
+                "description": {
+                    "example": "Landed here by accident but look how wonderful this place is in the photos attached",
+                    "type": "string"
+                },
+                "lat": {
+                    "example": 53.112385,
+                    "type": "number"
+                },
+                "lon": {
+                    "example": 10.58349,
+                    "type": "number"
+                },
+                "picture": {
+                    "example": "<BASE_64_ENCODED_STRING>",
+                    "type": "string"
+                },
+                "time_zone": {
+                    "example": "Berlin",
+                    "type": "string"
+                },
+                "title": {
+                    "example": "Beautiful place out in the country",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

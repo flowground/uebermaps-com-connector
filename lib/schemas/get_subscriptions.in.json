@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "user_id": {
+            "type": "integer"
+        },
+        "map_id": {
+            "type": "integer"
+        }
+    }
+}
